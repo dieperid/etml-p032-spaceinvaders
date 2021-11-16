@@ -12,3 +12,10 @@ E:\CFC\2ème année\Projets\P-032_Dev\Space Invaders\Space Invaders\obj\Debug\Sp
 E:\CFC\2ème année\Projets\P-032_Dev\Space Invaders\Space Invaders\bin\Debug\Space Invaders.exe.config
 E:\CFC\2ème année\Projets\P-032_Dev\Space Invaders\Space Invaders\bin\Debug\Space Invaders.exe
 E:\CFC\2ème année\Projets\P-032_Dev\Space Invaders\Space Invaders\bin\Debug\Space Invaders.pdb
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\Space Invaders\Space Invaders\bin\Debug\Space Invaders.exe.config
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\Space Invaders\Space Invaders\bin\Debug\Space Invaders.exe
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\Space Invaders\Space Invaders\bin\Debug\Space Invaders.pdb
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\Space Invaders\Space Invaders\obj\Debug\Space Invaders.csprojAssemblyReference.cache
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\Space Invaders\Space Invaders\obj\Debug\Space Invaders.csproj.CoreCompileInputs.cache
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\Space Invaders\Space Invaders\obj\Debug\Space Invaders.exe
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\Space Invaders\Space Invaders\obj\Debug\Space Invaders.pdb
