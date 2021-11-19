@@ -35,8 +35,7 @@ namespace Space_Invaders
         public static void GameStart()
         {
             #region[GameStart code]
-            // Appel de la méthode RenderWelcomeScreen pour l'affichage de bienvenue
-            //RenderWelcomeScreen();
+
             var gameState = new GameState();    // Création d'un instance de la class GameState
             _setWindowSize = true;
 
@@ -196,6 +195,7 @@ namespace Space_Invaders
         static void RenderGameOverScreen(GameState state)
         {
             #region[RenderGameOverScreen code]
+
             // Clear de la console
             Console.Clear();
 
@@ -205,26 +205,22 @@ namespace Space_Invaders
             // Ecriture du score du joueur à la position donnée
             Console.SetCursorPosition(15, 14);
             Console.Write(String.Format("Votre Score : {0}", state.GameScore));
+
+            // Demande à l'utilisateur de rentrer son pseudo
+            Console.SetCursorPosition(15, 16);
+            Console.Write("Entrez votre pseudo : ");
+            string pseudo = Convert.ToString(Console.ReadLine());
+            MenuHighscore.Pseudo = pseudo.Trim();
+
+            MenuHighscore.WriteFile(state);
+
             Thread.Sleep(500);
-
             // Demande à l'utiliseur si il veut rejouer
-            Console.SetCursorPosition(15, 17);
-            Console.Write("Appuyez sur la touche [Enter] si vous voulez rejouer.");
             Console.SetCursorPosition(15, 18);
+            Console.Write("Appuyez sur la touche [Enter] si vous voulez rejouer.");
+            Console.SetCursorPosition(15, 19);
             Console.Write("Appuyez sur la touche [Q] si vous voulez quitter le jeu.");
-            #endregion
-        }
 
-        /// <summary>
-        /// Méthode RenderWelcomeScreen qui sert à afficher le texte de bienvenue
-        /// </summary>
-        static void RenderWelcomeScreen()
-        {
-            #region[RenderWelcomeScreen code]
-            // Création d'une instance de la class WelcomeScreen
-            var welcomeScreen = new WelcomeScreen();
-            // Appel de la méthode RenderWelcomeScreen
-            welcomeScreen.RenderWelcomeScreen();
             #endregion
         }
     }

@@ -84,6 +84,9 @@ namespace Space_Invaders
             Console.ForegroundColor = ConsoleColor.White;
         }
 
+        /// <summary>
+        /// Méthode pour écrire le titre de la page GameOver
+        /// </summary>
         public static void WriteGameOverTitle()
         {
             // Constante qui contient le titre de la page
@@ -97,6 +100,28 @@ namespace Space_Invaders
             ";
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(TITLE_GAMEOVER);
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        /// <summary>
+        /// Méthode pour écrire le titre de la page Highscore
+        /// </summary>
+        public static void WriteHighscoreTitle()
+        {
+            const string TITLE_HIGHSCORE = @"
+         ___  ___      ___      ________      ___  ___      ________       ________      ________      ________      _______      
+        |\  \|\  \    |\  \    |\   ____\    |\  \|\  \    |\   ____\     |\   ____\    |\   __  \    |\   __  \    |\  ___ \     
+        \ \  \\\  \   \ \  \   \ \  \___|    \ \  \\\  \   \ \  \___|_    \ \  \___|    \ \  \|\  \   \ \  \|\  \   \ \   __/|    
+         \ \   __  \   \ \  \   \ \  \  ___   \ \   __  \   \ \_____  \    \ \  \        \ \  \\\  \   \ \   _  _\   \ \  \_|/__  
+          \ \  \ \  \   \ \  \   \ \  \|\  \   \ \  \ \  \   \|____|\  \    \ \  \____    \ \  \\\  \   \ \  \\  \|   \ \  \_|\ \ 
+           \ \__\ \__\   \ \__\   \ \_______\   \ \__\ \__\    ____\_\  \    \ \_______\   \ \_______\   \ \__\\ _\    \ \_______\
+            \|__|\|__|    \|__|    \|_______|    \|__|\|__|   |\_________\    \|_______|    \|_______|    \|__|\|__|    \|_______|
+                                                              \|_________|                                                        
+        ";
+            // Ecriture du titre en vert + position x et y à 0
+            Console.SetCursorPosition(0, 0);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(TITLE_HIGHSCORE);
             Console.ForegroundColor = ConsoleColor.White;
         }
     }

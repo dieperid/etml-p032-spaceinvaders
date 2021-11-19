@@ -30,7 +30,7 @@ namespace Space_Invaders
         public static void AboutText()
         {
             #region[AboutText code]
-            // Appel de la méthode ClearMenuAll pour clear toute la page
+            // Appel de la méthode ClearScreen pour clear toute la page
             ClearPages.ClearScreen();
 
             // Ecriture du titre de la page + son contenu

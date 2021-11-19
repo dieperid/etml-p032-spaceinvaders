@@ -51,6 +51,7 @@ namespace Space_Invaders
                     MenuOptions.Menu("Son", "Difficulté", "Retour");
                     break;
                 case 2:
+                    MenuHighscore.HighscoreText();
                     break;
                 case 3:
                     About.AboutText();

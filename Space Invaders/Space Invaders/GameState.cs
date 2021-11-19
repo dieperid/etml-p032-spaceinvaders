@@ -449,7 +449,7 @@ namespace Space_Invaders
                         // Remove l'invader tué dans la list d'invader
                         Invaders.Remove(killedInvader);
                         // Incrémentation du score du joueur
-                        GameScore++;
+                        GameScore += 10;
                         // Return true si un invader est tué
                         return true;
                     }
