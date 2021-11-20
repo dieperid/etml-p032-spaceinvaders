@@ -53,12 +53,12 @@
     <Compile Include="GameObjects\Invader.cs" />
     <Compile Include="GameObjects\Wall.cs" />
     <Compile Include="GameState.cs" />
+    <Compile Include="MenuHighscore.cs" />
     <Compile Include="MenuOptions.cs" />
     <Compile Include="MenuHome.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Title.cs" />
-    <Compile Include="WelcomeScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
