@@ -424,7 +424,7 @@ namespace Space_Invaders
         /// </summary>
         /// <param name="bullet">Bullet envoyée à la méthode</param>
         /// <returns></returns>
-        private bool CheckKillInvader(Bullet bullet)
+        public bool CheckKillInvader(Bullet bullet)
         {
             #region[CheckKillInvader code]
             Invader invader = new Invader(0, 0, 0);    // Création d'une instance de Invader
@@ -467,7 +467,7 @@ namespace Space_Invaders
         /// </summary>
         /// <param name="bullet">Bullet envoyée à la méthode</param>
         /// <returns></returns>
-        private bool CheckKillHero(Bullet bullet)
+        public bool CheckKillHero(Bullet bullet)
         {
             #region[CheckKill code]
             int size = Hero.Symbol.Length;      // Variable size pour la hitbox du Hero
@@ -505,7 +505,7 @@ namespace Space_Invaders
         /// </summary>
         /// <param name="bullet"></param>
         /// <returns></returns>
-        private bool CheckShootWall(Bullet bullet)
+        public bool CheckShootWall(Bullet bullet)
         {
             #region[CheckShootWall code]
             // Si la bullet est différente de null

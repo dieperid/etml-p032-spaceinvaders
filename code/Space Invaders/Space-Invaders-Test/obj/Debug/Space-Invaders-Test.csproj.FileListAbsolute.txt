@@ -1,0 +1,20 @@
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\bin\Debug\Space-Invaders-Test.dll
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\bin\Debug\Space-Invaders-Test.pdb
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\bin\Debug\Space Invaders.exe
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\bin\Debug\Space Invaders.pdb
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\bin\Debug\Space Invaders.exe.config
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\obj\Debug\Space-Invaders-Test.csprojAssemblyReference.cache
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\obj\Debug\Space-Invaders-Test.csproj.CoreCompileInputs.cache
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\obj\Debug\Space-Invaders-Test.csproj.CopyComplete
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\obj\Debug\Space-Invaders-Test.dll
+F:\CFC\2ème année\Projets\P-032_Dev\etml-p032-spaceinvaders\code\Space Invaders\Space-Invaders-Test\obj\Debug\Space-Invaders-Test.pdb

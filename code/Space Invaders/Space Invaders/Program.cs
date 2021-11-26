@@ -10,7 +10,7 @@ namespace Space_Invaders
     /// <summary>
     /// Classe Program
     /// </summary>
-    class Program
+    public class Program
     {
         #region[Déclaration des variables]
         /// <summary>

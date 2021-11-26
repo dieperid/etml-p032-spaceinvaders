@@ -10,7 +10,7 @@ namespace Space_Invaders
     /// <summary>
     /// Classe pour le menu des options
     /// </summary>
-    class MenuOptions
+    public class MenuOptions
     {
         #region[Déclaration des variables]
         /// <summary>
