@@ -83,19 +83,19 @@ namespace Space_Invaders
         /// <summary>
         /// Son pour la mort d'un invader
         /// </summary>
-        public SoundPlayer _deathSoundInvader = new SoundPlayer("F:\\CFC\\2ème année\\Projets\\P-032_Dev\\Son\\minecraftOw.wav");
+        public SoundPlayer _deathSoundInvader = new SoundPlayer("F:\\CFC\\2ème année\\Projets\\P-032_Dev\\etml-p032-spaceinvaders\\assets\\son\\minecraftOw.wav");
         /// <summary>
         /// Son pour la mort du Hero
         /// </summary>
-        public SoundPlayer _deathSoundHero = new SoundPlayer("F:\\CFC\\2ème année\\Projets\\P-032_Dev\\Son\\aieeeee.wav");
+        public SoundPlayer _deathSoundHero = new SoundPlayer("F:\\CFC\\2ème année\\Projets\\P-032_Dev\\etml-p032-spaceinvaders\\assets\\son\\aieeeee.wav");
         /// <summary>
         /// Son pour l'écran Game Over
         /// </summary>
-        public SoundPlayer _gameOverSound = new SoundPlayer("F:\\CFC\\2ème année\\Projets\\P-032_Dev\\Son\\gameOver.wav");
+        public SoundPlayer _gameOverSound = new SoundPlayer("F:\\CFC\\2ème année\\Projets\\P-032_Dev\\etml-p032-spaceinvaders\\assets\\son\\gameOver.wav");
         /// <summary>
         /// Son pour les tirs du Hero
         /// </summary>
-        public SoundPlayer _shootSound = new SoundPlayer("F:\\CFC\\2ème année\\Projets\\P-032_Dev\\Son\\laserSound.wav");
+        public SoundPlayer _shootSound = new SoundPlayer("F:\\CFC\\2ème année\\Projets\\P-032_Dev\\etml-p032-spaceinvaders\\assets\\son\\laserSound.wav");
 
         #endregion
 
