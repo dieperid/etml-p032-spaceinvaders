@@ -43,6 +43,9 @@ namespace Space_Invaders
             #endregion
         }
 
+        /// <summary>
+        /// Méthode pour le clear de l'écran de jeu
+        /// </summary>
         public static void ClearScreenGame()
         {
             #region[ClearScreenGame code]
@@ -57,8 +60,12 @@ namespace Space_Invaders
             #endregion
         }
 
+        /// <summary>
+        /// Méthode pour le clear de l'écran game over
+        /// </summary>
         public static void ClearScreenGameOver()
         {
+            #region[ClearScreenGameOver code]
             int compteurClear = 0;      // Compteur pour la position Y du clear
 
             // Boucle for pour clear la page de jeu
@@ -68,6 +75,7 @@ namespace Space_Invaders
                 Console.Write(new string(' ', Console.WindowWidth));
                 Thread.Sleep(5);
             }
+            #endregion
         }
     }
 }

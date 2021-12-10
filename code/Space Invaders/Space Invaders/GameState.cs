@@ -67,7 +67,7 @@ namespace Space_Invaders
         /// <summary>
         /// Variable qui contient le nombre de vie du Hero
         /// </summary>
-        public int HeroLife = 3;
+        public int heroLife = 3;
         /// <summary>
         /// Variable qui contient le nombre d'invader par ligne
         /// </summary>
@@ -83,19 +83,19 @@ namespace Space_Invaders
         /// <summary>
         /// Son pour la mort d'un invader
         /// </summary>
-        public SoundPlayer _deathSoundInvader = new SoundPlayer("F:\\CFC\\2ème année\\Projets\\P-032_Dev\\etml-p032-spaceinvaders\\assets\\son\\minecraftOw.wav");
+        public SoundPlayer deathSoundInvader = new SoundPlayer(Son.minecraftOw);
         /// <summary>
         /// Son pour la mort du Hero
         /// </summary>
-        public SoundPlayer _deathSoundHero = new SoundPlayer("F:\\CFC\\2ème année\\Projets\\P-032_Dev\\etml-p032-spaceinvaders\\assets\\son\\aieeeee.wav");
+        public SoundPlayer deathSoundHero = new SoundPlayer(Son.aieeeee);
         /// <summary>
         /// Son pour l'écran Game Over
         /// </summary>
-        public SoundPlayer _gameOverSound = new SoundPlayer("F:\\CFC\\2ème année\\Projets\\P-032_Dev\\etml-p032-spaceinvaders\\assets\\son\\gameOver.wav");
+        public SoundPlayer gameOverSound = new SoundPlayer(Son.gameOver);
         /// <summary>
         /// Son pour les tirs du Hero
         /// </summary>
-        public SoundPlayer _shootSound = new SoundPlayer("F:\\CFC\\2ème année\\Projets\\P-032_Dev\\etml-p032-spaceinvaders\\assets\\son\\laserSound.wav");
+        public SoundPlayer shootSound = new SoundPlayer(Son.laserSound);
 
         #endregion
 
@@ -139,7 +139,7 @@ namespace Space_Invaders
                     case ConsoleKey.Spacebar:
                         if (MenuOptions.sound == true)
                         {
-                            _shootSound.Play();
+                            shootSound.Play();
                         }
                         Bullets.Add(new Bullet(Hero.PositionX, Hero.PositionY));
                         break;
@@ -245,7 +245,7 @@ namespace Space_Invaders
                 foreach (var invaderCheckLimit in Invaders)
                 {
                     // Si la position X de l'invader est > à la taille de la console - 2 et que le bool _invaderFromRightAddY est vrai
-                    if ((invaderCheckLimit.PositionX + invaderCheckLimit.Symbol.Length > Console.WindowWidth - 2) && (_invaderFromRightAddY == true))
+                    if ((invaderCheckLimit.PositionX + invaderCheckLimit.Symbol.Length > Program.WINDOW_WIDTH - 42) && (_invaderFromRightAddY == true))
                     {
                         compteur += 1;                  // Incrémentation du compteur pour la vérif
                         _mooveLeft = true;              // Le bool _mooveLeft est vrai donc les prochain déplacement vont vers la gauche
@@ -423,8 +423,8 @@ namespace Space_Invaders
         /// Méthode CheckKillInvader qui vérifie si la balle a touché un invader
         /// </summary>
         /// <param name="bullet">Bullet envoyée à la méthode</param>
-        /// <returns></returns>
-        private bool CheckKillInvader(Bullet bullet)
+        /// <returns>true s'il est mort, false s'il n'est pas mort</returns>
+        public bool CheckKillInvader(Bullet bullet)
         {
             #region[CheckKillInvader code]
             Invader invader = new Invader(0, 0, 0);    // Création d'une instance de Invader
@@ -444,7 +444,7 @@ namespace Space_Invaders
                     {
                         if (MenuOptions.sound == true)
                         {
-                            _deathSoundInvader.Play();
+                            deathSoundInvader.Play();
                         }
                         // Remove l'invader tué dans la list d'invader
                         Invaders.Remove(killedInvader);
@@ -466,8 +466,8 @@ namespace Space_Invaders
         /// Méthode CheckKillHero qui vérifie si la balle a touché le Hero
         /// </summary>
         /// <param name="bullet">Bullet envoyée à la méthode</param>
-        /// <returns></returns>
-        private bool CheckKillHero(Bullet bullet)
+        /// <returns>true s'il est mort, false s'il n'est pas mort</returns>
+        public bool CheckKillHero(Bullet bullet)
         {
             #region[CheckKill code]
             int size = Hero.Symbol.Length;      // Variable size pour la hitbox du Hero
@@ -482,12 +482,12 @@ namespace Space_Invaders
                     {
                         if (MenuOptions.sound == true)
                         {
-                            _deathSoundHero.Play();
+                            deathSoundHero.Play();
                         }
                         // Decrémentation de la vie du Hero
-                        HeroLife--;
+                        heroLife--;
                         // Création d'un nouveau Hero
-                        Hero = new Hero((Program.WINDOW_WIDTH - 47) / 2, 30, HeroLife);
+                        Hero = new Hero((Program.WINDOW_WIDTH - 47) / 2, 30, heroLife);
                         // Return true si un invader est tué
                         return true;
                     }
@@ -504,8 +504,8 @@ namespace Space_Invaders
         /// Méthode CheckShootWall qui vérifie si la balle a touché un mur
         /// </summary>
         /// <param name="bullet"></param>
-        /// <returns></returns>
-        private bool CheckShootWall(Bullet bullet)
+        /// <returns>true si le mur est touché, false s'il n'est pas touché</returns>
+        public bool CheckShootWall(Bullet bullet)
         {
             #region[CheckShootWall code]
             // Si la bullet est différente de null
@@ -540,16 +540,16 @@ namespace Space_Invaders
         /// <summary>
         /// Méthode CheckGameOver qui check si la partie est finie
         /// </summary>
-        /// <returns></returns>
+        /// <returns>true si la game est over, false si c'est pas fini</returns>
         public bool CheckGameOver()
         {
             #region[CheckGameOver code]
 
-            if (HeroLife == 0 || Invaders.Count == 0)
+            if (heroLife == 0 || Invaders.Count == 0)
             {
                 if (MenuOptions.sound == true)
                 {
-                    _gameOverSound.Play();
+                    gameOverSound.Play();
                 }
                 return true;
             }
