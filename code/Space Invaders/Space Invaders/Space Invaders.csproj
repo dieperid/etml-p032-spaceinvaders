@@ -58,10 +58,33 @@
     <Compile Include="MenuHome.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Son.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Son.resx</DependentUpon>
+    </Compile>
     <Compile Include="Title.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Son.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Son.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aieeeee.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameOver.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laserSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minecraftOw.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

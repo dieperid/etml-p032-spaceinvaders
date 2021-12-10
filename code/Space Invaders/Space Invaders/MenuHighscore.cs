@@ -26,9 +26,13 @@ namespace Space_Invaders
         /// </summary>
         private static bool _valid;
         /// <summary>
-        /// variable _pathFile pour le chemin du fichier de score
+        /// variable _pathUser pour le chemin de l'utilisateur
         /// </summary>
-        private static string _pathFile = "K:\\INF\\Eleves\\Classes\\CIN2A\\Projet\\DD-ScoreSpaceInvaders\\Score.txt";
+        private static string _pathUser = @"%USERPROFILE%\Desktop\Score.txt";
+        /// <summary>
+        /// Variable _pathFile pour le chemin du fichier
+        /// </summary>
+        private static string _pathFile = Environment.ExpandEnvironmentVariables(_pathUser);
         /// <summary>
         /// Variable _pseudo pour le pseudo du joueur
         /// </summary>
@@ -90,20 +94,28 @@ namespace Space_Invaders
 
             int positionY = 15;     // Position y de départ pour l'affichage des scores
 
-            // Leture du fichier texte
-            using(StreamReader sr = new StreamReader(_pathFile))
+            // Si le fichier n'existe pas on le crée
+            if (!File.Exists(_pathFile))
             {
-                string line;    // Récupère la ligne lue
-
-                // Tant que la ligne contient une valeur
-                while((line = sr.ReadLine()) != null)
+                StreamWriter sw = File.CreateText(_pathFile);
+            }
+            else
+            {
+                // Leture du fichier texte
+                using (StreamReader sr = new StreamReader(_pathFile))
                 {
-                    // Set la position du curseur et on écrit le contenu
-                    Console.SetCursorPosition(15, positionY);
-                    Console.WriteLine(line);
+                    string line;    // Récupère la ligne lue
 
-                    // Incrémentation de la position X
-                    positionY++;
+                    // Tant que la ligne contient une valeur
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        // Set la position du curseur et on écrit le contenu
+                        Console.SetCursorPosition(15, positionY);
+                        Console.WriteLine(line);
+
+                        // Incrémentation de la position X
+                        positionY++;
+                    }
                 }
             }
 
@@ -125,57 +137,65 @@ namespace Space_Invaders
             string newFileContent = "";     // Variable qui récupère les nouvelles données à écrire
             string fileContent = "";        // Variable qui récupère les anciennes données
 
-            // Boucle foreach pour lire tout le contenu du fichier texte et trouver un texte qui contient le pseudo du joueur
-            foreach (var match in File.ReadLines(_pathFile).Select((text, index) => new { text, lineNumber = index + 1 }).Where(x => x.text.Contains(Pseudo)))
+            // Si le fichier n'existe pas on le crée
+            if (!File.Exists(_pathFile))
             {
-                // Split des info récupérée dans le tableau
-                arrayContent = match.text.Split(' ');
-
-                // Si la case 0 du tableau correspond à un pseudo
-                if (arrayContent[0] == Pseudo)
-                {
-                    fileResult = match.text;
-                }
+                StreamWriter sw = File.CreateText(_pathFile);
             }
-
-            // Si la variable fileResult n'est pas vide
-            if(fileResult != "")
-            {
-                // Recherche seuelement des nombre dans le contenu récupéré
-                MatchCollection matches = Regex.Matches(fileResult, "[0-9]");
-                foreach (Match match in matches)
-                {
-                    lastScore += match.Value;
-                }
-
-                // On converti l'ancien score
-                fileContent = File.ReadAllText(_pathFile);
-
-                // Si le score qu'il vient de faire est supérieur à l'ancien
-                if(state.GameScore > Convert.ToInt32(lastScore))
-                {
-                    // On remplace son score dans la variable qui contient le contenu du fichier texte
-                    newFileContent = fileContent.Replace(Pseudo + " \t:   " + lastScore, Pseudo + " \t:   " + state.GameScore);
-                }
-
-                // On écrit dans le fichier texte les nouvelles données
-                using (FileStream fs = File.Create(_pathFile))
-                {
-                    Byte[] textToWrite = new UTF8Encoding(true).GetBytes(newFileContent);
-                    fs.Write(textToWrite, 0, textToWrite.Length);
-                }
-            }
-            // Sinon
             else
             {
-                // On lit simplement le contenu
-                textInFile = File.ReadAllText(_pathFile);
-
-                // On écrit le contenu total
-                using (FileStream fs = File.Create(_pathFile))
+                // Boucle foreach pour lire tout le contenu du fichier texte et trouver un texte qui contient le pseudo du joueur
+                foreach (var match in File.ReadLines(_pathFile).Select((text, index) => new { text, lineNumber = index + 1 }).Where(x => x.text.Contains(Pseudo)))
                 {
-                    Byte[] textToWrite = new UTF8Encoding(true).GetBytes(textInFile + "\n" + Pseudo + " \t:   " + state.GameScore);
-                    fs.Write(textToWrite, 0, textToWrite.Length);
+                    // Split des info récupérée dans le tableau
+                    arrayContent = match.text.Split(' ');
+
+                    // Si la case 0 du tableau correspond à un pseudo
+                    if (arrayContent[0] == Pseudo)
+                    {
+                        fileResult = match.text;
+                    }
+                }
+
+                // Si la variable fileResult n'est pas vide
+                if (fileResult != "")
+                {
+                    // Recherche seuelement des nombre dans le contenu récupéré
+                    MatchCollection matches = Regex.Matches(fileResult, "[0-9]");
+                    foreach (Match match in matches)
+                    {
+                        lastScore += match.Value;
+                    }
+
+                    // On converti l'ancien score
+                    fileContent = File.ReadAllText(_pathFile);
+
+                    // Si le score qu'il vient de faire est supérieur à l'ancien
+                    if (state.GameScore > Convert.ToInt32(lastScore))
+                    {
+                        // On remplace son score dans la variable qui contient le contenu du fichier texte
+                        newFileContent = fileContent.Replace(Pseudo + " \t:   " + lastScore, Pseudo + " \t:   " + state.GameScore);
+                    }
+
+                    // On écrit dans le fichier texte les nouvelles données
+                    using (FileStream fs = File.Create(_pathFile))
+                    {
+                        Byte[] textToWrite = new UTF8Encoding(true).GetBytes(newFileContent);
+                        fs.Write(textToWrite, 0, textToWrite.Length);
+                    }
+                }
+                // Sinon
+                else
+                {
+                    // On lit simplement le contenu
+                    textInFile = File.ReadAllText(_pathFile);
+
+                    // On écrit le contenu total
+                    using (FileStream fs = File.Create(_pathFile))
+                    {
+                        Byte[] textToWrite = new UTF8Encoding(true).GetBytes(textInFile + "\n" + Pseudo + " \t:   " + state.GameScore);
+                        fs.Write(textToWrite, 0, textToWrite.Length);
+                    }
                 }
             }
 
