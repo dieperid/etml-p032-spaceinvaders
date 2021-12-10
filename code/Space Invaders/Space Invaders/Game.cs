@@ -71,14 +71,14 @@ namespace Space_Invaders
                     // Si la touche préssée est Q
                     if (key == ConsoleKey.Q)
                     {
-                        state._gameOverSound.Stop();
+                        state.gameOverSound.Stop();
                         ClearPages.ClearScreenGameOver();
                         Program.Main();
                     }
                     // Si la touche préssée est Enter
                     else if (key == ConsoleKey.Enter)
                     {
-                        state._gameOverSound.Stop();
+                        state.gameOverSound.Stop();
                         // On réinitialise tous les compteur à 0, la position du Hero, les list de bullet et d'invader
                         _boolGenerate = true;
                         gameState.Invaders.Clear();
@@ -160,7 +160,7 @@ namespace Space_Invaders
             board.RenderWalls(state.Walls);
             board.DisplayGameScore(state.GameScore);
             board.DisplayEscapedInvaderCount(state.EscapedInvaderCount);
-            board.DisplayHeroLife(state.HeroLife);
+            board.DisplayHeroLife(state.heroLife);
             board.HideCursor();
             #endregion
         }

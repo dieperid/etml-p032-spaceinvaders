@@ -17,6 +17,7 @@ namespace Space_Invaders
         /// </summary>
         public static void WriteHomeTitle()
         {
+            #region[WriteHomeTitle code]
             // Constante qui contient le titre de la page
             const string TITLE_HOME = @"
 
@@ -36,6 +37,7 @@ namespace Space_Invaders
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(TITLE_HOME);
             Console.ForegroundColor = ConsoleColor.White;
+            #endregion
         }
 
         /// <summary>
@@ -43,6 +45,7 @@ namespace Space_Invaders
         /// </summary>
         public static void WriteOptionsTitle()
         {
+            #region[WriteOptionsTitle code]
             // Constante qui contient le titre de la page
             const string TITLE_OPTIONS = @"
                      ________      ________    _________    ___      ________      ________       ________      
@@ -59,6 +62,7 @@ namespace Space_Invaders
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(TITLE_OPTIONS);
             Console.ForegroundColor = ConsoleColor.White;
+            #endregion
         }
 
         /// <summary>
@@ -66,6 +70,7 @@ namespace Space_Invaders
         /// </summary>
         public static void WriteAboutTitle()
         {
+            #region[WriteAboutTitle code]
             // Constante qui contient le titre de la page
             const string TITLE_ABOUT = @"
                      ________          ________    ________      ________      ________    ________      ________      
@@ -82,6 +87,7 @@ namespace Space_Invaders
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(TITLE_ABOUT);
             Console.ForegroundColor = ConsoleColor.White;
+            #endregion
         }
 
         /// <summary>
@@ -89,6 +95,7 @@ namespace Space_Invaders
         /// </summary>
         public static void WriteGameOverTitle()
         {
+            #region[WriteGameOverTitle code]   
             // Constante qui contient le titre de la page
             const string TITLE_GAMEOVER = @"
              ██████╗  █████╗ ███╗   ███╗███████╗     ██████╗ ██╗   ██╗███████╗██████╗ 
@@ -101,6 +108,7 @@ namespace Space_Invaders
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(TITLE_GAMEOVER);
             Console.ForegroundColor = ConsoleColor.White;
+            #endregion
         }
 
         /// <summary>
@@ -108,6 +116,7 @@ namespace Space_Invaders
         /// </summary>
         public static void WriteHighscoreTitle()
         {
+            #region[WriteHighScoreTitle code]
             const string TITLE_HIGHSCORE = @"
          ___  ___      ___      ________      ___  ___      ________       ________      ________      ________      _______      
         |\  \|\  \    |\  \    |\   ____\    |\  \|\  \    |\   ____\     |\   ____\    |\   __  \    |\   __  \    |\  ___ \     
@@ -123,6 +132,7 @@ namespace Space_Invaders
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(TITLE_HIGHSCORE);
             Console.ForegroundColor = ConsoleColor.White;
+            #endregion
         }
     }
 }

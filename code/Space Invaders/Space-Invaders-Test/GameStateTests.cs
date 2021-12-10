@@ -21,14 +21,14 @@ namespace Space_Invaders.Tests
             GameState gamestate = new GameState();
 
             // Act
-            for (byte i = 0; gamestate.HeroLife != 0; i++)
+            for (byte i = 0; gamestate.heroLife != 0; i++)
             {
                 Bullet bullet = new Bullet(gamestate.Hero.PositionX, gamestate.Hero.PositionY);
                 gamestate.CheckKillHero(bullet);
             }
 
             // Assert
-            Assert.AreEqual(0, gamestate.HeroLife, "Le résultat doit être 0");
+            Assert.AreEqual(0, gamestate.heroLife, "Le résultat doit être 0");
         }
 
         [TestMethod()]
@@ -173,18 +173,22 @@ namespace Space_Invaders.Tests
 
             // Act
 
+            // Le tableau expectedPosition récupère les positions X + 1 des invaders
             for (int i = 0; i < gamestate.Invaders.Count; i++)
             {
                 expectedPosition.Add(gamestate.Invaders[i].PositionX + 1);
             }
             
+            // On update la position des invaders
             gamestate.UpdateInvaderLocation();
 
+            // Le tableau actualPosition récupère les positions X des invaders
             for (int i = 0; i < gamestate.Invaders.Count; i++)
             {
                 actualPosition.Add(gamestate.Invaders[i].PositionX);
             }
 
+            // Boucle for qui vérifie si les position du tableu expectedPosition et celle du tableau actualPosition sont les mêmes
             for(int i = 0; i < gamestate.Invaders.Count; i++)
             {
                 if(expectedPosition[i] != actualPosition[i])

@@ -33,8 +33,8 @@ namespace Space_Invaders
         /// <summary>
         /// Méthode SetBoardSize pour définir la taille de la console
         /// </summary>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
+        /// <param name="width">largeur</param>
+        /// <param name="height">hauteur</param>
         public void SetBoardSize(int width, int height)
         {
             #region[SetBoardSize code]
@@ -59,9 +59,9 @@ namespace Space_Invaders
                 hero.PositionX = 2;
             }
             // Si la posotion du hero + sa taille > la taille de la console - 2
-            else if (hero.PositionX + hero.Symbol.Length > Console.WindowWidth - 2)
+            else if (hero.PositionX + hero.Symbol.Length > Program.WINDOW_WIDTH - 42)
             {
-                hero.PositionX = Console.WindowWidth - 2;
+                hero.PositionX = Program.WINDOW_WIDTH - 42;
             }
             // Ecriture du hero à la position donnée
             Console.SetCursorPosition(hero.PositionX, hero.PositionY);
@@ -110,7 +110,7 @@ namespace Space_Invaders
         /// <summary>
         /// Méthode RenderBullets qui check la position des bullets
         /// </summary>
-        /// <param name="bullets">Variable bullets qui est une instance de la list de bullet</param>
+        /// <param name="bullets">Variable bullets qui est une instance de la list de Bullet</param>
         public void RenderBullets(List<Bullet> bullets)
         {
             #region[RenderBullets code]
@@ -142,7 +142,7 @@ namespace Space_Invaders
         /// <summary>
         /// Méthode RenderWalls qui affiche des walls en console
         /// </summary>
-        /// <param name="walls"></param>
+        /// <param name="walls">Variables walls qui est une instance de la list de Wall</param>
         public void RenderWalls(List<Wall> walls)
         {
             #region[RenderWalls code]
@@ -176,7 +176,7 @@ namespace Space_Invaders
         /// <summary>
         /// Méthode RemoveOutOfBoundBullet qui retire la bullet
         /// </summary>
-        /// <param name="bullet"></param>
+        /// <param name="bullet">Variable bullet qui est une instance de la class Bullet</param>
         private void RemoveOutOfBoundBullet(Bullet bullet)
         {
             #region[RemoveOutOfBoundBullet code]
@@ -193,7 +193,7 @@ namespace Space_Invaders
         /// <summary>
         /// Méthode RemoveOutOfBoundInvader qui retire l'invader
         /// </summary>
-        /// <param name="invader"></param>
+        /// <param name="invader">Variable invader qui est une instance de la class Invader</param>
         private void RemoveOutOfBoundInvader(Invader invader)
         {
             #region[RemoveOutOfBoundInvader code]
