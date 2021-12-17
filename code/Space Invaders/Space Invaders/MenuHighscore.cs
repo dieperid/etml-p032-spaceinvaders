@@ -175,13 +175,22 @@ namespace Space_Invaders
                 {
                     // On remplace son score dans la variable qui contient le contenu du fichier texte
                     newFileContent = fileContent.Replace(Pseudo + " \t:   " + lastScore, Pseudo + " \t:   " + state.GameScore);
-                }
 
-                // On écrit dans le fichier texte les nouvelles données
-                using (FileStream fs = File.Create(_pathFile))
+                    // On écrit dans le fichier texte les nouvelles données
+                    using (FileStream fs = File.Create(_pathFile))
+                    {
+                        Byte[] textToWrite = new UTF8Encoding(true).GetBytes(newFileContent);
+                        fs.Write(textToWrite, 0, textToWrite.Length);
+                    }
+                }
+                else
                 {
-                    Byte[] textToWrite = new UTF8Encoding(true).GetBytes(newFileContent);
-                    fs.Write(textToWrite, 0, textToWrite.Length);
+                    // On écrit dans le fichier texte les nouvelles données
+                    using (FileStream fs = File.Create(_pathFile))
+                    {
+                        Byte[] textToWrite = new UTF8Encoding(true).GetBytes(fileContent);
+                        fs.Write(textToWrite, 0, textToWrite.Length);
+                    }
                 }
             }
             // Sinon
