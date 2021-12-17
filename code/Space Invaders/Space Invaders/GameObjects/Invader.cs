@@ -27,6 +27,7 @@ namespace Space_Invaders.GameObjects
         /// </summary>
         /// <param name="x">Position x de l'invader</param>
         /// <param name="y">Position y de l'invader</param>
+        /// <param name="idInvader">Id de l'invader</param>
         public Invader(int x, int y, int idInvader) : base(x, y)
         {
             // Caractère de l'invader

@@ -28,6 +28,7 @@ namespace Space_Invaders.GameObjects
         /// </summary>
         /// <param name="x">Position x du Hero</param>
         /// <param name="y">Position y du Hero</param>
+        /// <param name="life">Vie du Hero</param>
         public Hero(int x, int y, int life) : base(x, y)
         {
             // Caractère du Hero
